@@ -348,3 +348,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Docker volume locations
+/mssql-data/*.*
+!/mssql-data/readme.md
+
+# Traefik Certs
+/traefik/**/*.*
+!/traefik/**/readme.md
