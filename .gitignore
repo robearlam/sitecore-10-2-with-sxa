@@ -350,11 +350,11 @@ MigrationBackup/
 .ionide/
 
 # Docker volume locations
-/mssql-data/*.*
+/mssql-data/*
 !/mssql-data/readme.md
-/solr-data/**/*.*
+/solr-data/**/*
 !/solr-data/**/readme.md
 
 # Traefik Certs
-/traefik/**/*.*
+/traefik/**/*
 !/traefik/**/readme.md
