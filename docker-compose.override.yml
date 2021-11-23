@@ -16,3 +16,19 @@ services:
       args:
         BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-cd:${SITECORE_VERSION}
         SXA_RESOURCES_IMAGE: ${SITECORE_DOCKER_REGISTRY}modules/sitecore-sxa-xm1-assets:${SITECORE_VERSION}
+  
+  mssql-init:
+    image: custom-xm1-mssql-init:${SITECORE_VERSION}
+    build:
+      context: ./build/mssql-init
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-mssql-init:${SITECORE_VERSION}
+        SPE_RESOURCES_IMAGE: ${SITECORE_DOCKER_REGISTRY}modules/sitecore-spe-assets:${SITECORE_SPE_VERSION}
+
+  solr-init:
+    image: custom-xm1-solr-init:${SITECORE_VERSION}
+    build:
+      context: ./build/solr-init
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-solr-init:${SITECORE_VERSION}
+        SXA_RESOURCES_IMAGE: ${SITECORE_DOCKER_REGISTRY}modules/sitecore-sxa-xm1-assets:${SITECORE_VERSION}
